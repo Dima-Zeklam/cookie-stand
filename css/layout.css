@@ -1,0 +1,26 @@
+
+ul{
+
+    list-style-type: initial;
+   
+}
+
+
+li{
+    margin: 20px;
+    margin-left: 120px;
+    font-size: 20px;
+    padding: 8px;
+  
+}
+
+h2{
+     font-size: 40px;
+    font-family: 'Pacifico', cursive; 
+    margin-left: 30px;
+    margin-top: 20px;
+}
+div{
+    padding-bottom: 10px;
+    
+}

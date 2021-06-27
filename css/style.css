@@ -1,3 +1,7 @@
+
+body{
+    background-image: url('https://besthqwallpapers.com/Uploads/21-5-2019/93044/thumb-light-brown-paper-texture-paper-background-retro-brown-background-paper-textures.jpg');
+}
 ol{
 	list-style-type: decimal;
 }
@@ -7,17 +11,22 @@ ul{
 }
 
 h1{
-    font-size: 30px;
-   padding-top:50px;
-    font-family: 'Kirang Haerang', cursive;
+   font-size: 50px;
+   display: inline-block;
+  color:white;
+   /* font-family: 'Kirang Haerang', cursive; */
+   font-family: 'Pacifico', cursive;
+    margin-left: 200px;
 }
 /* h2{
     
   
 } */
-/* header{
-    text-align: center;
-} */
+header{
+ height: 200px;  
+
+ background-image: url('https://cdn1.vectorstock.com/i/1000x1000/43/85/realistic-dark-brown-carbon-background-texture-vector-1914385.jpg'); 
+} 
 
 /* section {
     font-family: 'Kirang Haerang', cursive;
@@ -31,7 +40,16 @@ margin-right: 150px;
 position: relative;
 background-color: rgb(9, 44, 119);
 } */
+ img{
+     /* position: absolute;  */
+    /* bottom: 600px; */
+    /* left: 70px; */
+    padding-left:20px;
+    padding-top: 40px;
+    transform: rotate(340deg); 
+    width:200px;
 
+}
 
 
  li{
@@ -39,7 +57,10 @@ background-color: rgb(9, 44, 119);
     margin-left: 90px;
     font-size: 20px;
 } 
-
+div{
+    /* background-color: azure; */
+    height: 400px;
+}
 /* .image{
     float: right;
      

@@ -1,0 +1,55 @@
+ol{
+	list-style-type: decimal;
+}
+ul{
+
+    list-style-type: circle;
+}
+
+h1{
+    font-size: 30px;
+   padding-top:50px;
+    font-family: 'Kirang Haerang', cursive;
+}
+/* h2{
+    
+  
+} */
+/* header{
+    text-align: center;
+} */
+
+/* section {
+    font-family: 'Kirang Haerang', cursive;
+font-size: 26px;
+color: wheat;
+border: white dotted 6px;
+padding : 26px;
+margin:100px;
+margin-left: 150px;
+margin-right: 150px;
+position: relative;
+background-color: rgb(9, 44, 119);
+} */
+
+
+
+ li{
+    margin: 20px;
+    margin-left: 90px;
+    font-size: 20px;
+} 
+
+/* .image{
+    float: right;
+     
+}
+
+div{
+    display: inline-block;
+  
+}
+ div p{ 
+   
+    padding: 15px;
+ } */

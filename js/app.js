@@ -1,4 +1,5 @@
 'use strict';
+
 let hour = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'] ;
 let x=[];
 let storsPlaces=[];
@@ -40,7 +41,6 @@ function tableRender(){
 
        let trEl = document.createElement('tr');
        let thEl = document.createElement('th');
-      // let tdEl = document.createAttribute('td');
       tableEl.appendChild(trEl);
        thEl.textContent = 'location';
        trEl.appendChild(thEl);
@@ -72,7 +72,9 @@ cookieStand.prototype.render = function(){
 cookieStand.prototype. countTotle = function(){ 
     let trEl = document.createElement('tr');
     for(let i=0;i<this.hourlySales.length;i++){
+      
         calcTotl[i] = storsPlaces[0].hourlySales[i] + storsPlaces[1].hourlySales[i]+storsPlaces[2].hourlySales[i] + storsPlaces[3].hourlySales[i] + storsPlaces[4].hourlySales[i] ;
+        
     }
     
 }
@@ -81,10 +83,10 @@ tableRender();
 function total(){
     let trEl = document.createElement('tr');
     let tdEl1 = document.createElement('td');
-    tdEl1.textContent = 'total';
+    tdEl1.textContent = 'Totals';
     trEl.appendChild(tdEl1);
     tableEl.appendChild(trEl);
-    for(let i=0 ; i<14;i++){
+    for(let i=0 ; i<calcTotl.length;i++){
     let tdEl1 = document.createElement('td');
     tdEl1.textContent = calcTotl[i];
     trEl.appendChild(tdEl1);
@@ -107,13 +109,6 @@ let Dubai  = new cookieStand(11,38,3.7,'Dubai');
 let Paris  = new cookieStand(20,38,2.3,'Paris');
 let Lima  = new cookieStand(2,16,4.6,'Lima' );
 
-
-// console.log(Seattle.calcRandHrlyCust());
-// console.log(Seattle.calcTotlPerhr());
-// console.log(Seattle.calDailyTotle());
-// console.log(Seattle.hourlySales)
-// console.log(tableRender());
-// console.log(Seattle.render());
 
 Seattle.generalCall();
 Tokyo.generalCall();

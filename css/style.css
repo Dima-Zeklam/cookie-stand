@@ -3,14 +3,6 @@ body{
     background-image: url('https://besthqwallpapers.com/Uploads/21-5-2019/93044/thumb-light-brown-paper-texture-paper-background-retro-brown-background-paper-textures.jpg');
 }
 
-/*delete*/
-/* ol{
-	list-style-type: decimal;
-}
-ul{
-
-    list-style-type: circle;
-} */
 
 h1{
    font-size: 50px;
@@ -20,37 +12,24 @@ h1{
    font-family: 'Pacifico', cursive;
     margin-left: 200px;
 }
-/* h2{
-    
-  
-} */
+
 header{
  height: 200px;  
 
  background-image: url('https://cdn1.vectorstock.com/i/1000x1000/43/85/realistic-dark-brown-carbon-background-texture-vector-1914385.jpg'); 
 } 
 
-/* section {
-    font-family: 'Kirang Haerang', cursive;;
-font-size: 26px;
-color: wheat;
-border: white dotted 6px;
-padding : 26px;
-margin:100px;
-margin-left: 150px;
-margin-right: 150px;
-position: relative;
-background-color: rgb(9, 44, 119);
-} */
+
  img{
-     /* position: absolute;  */
-    /* bottom: 600px; */
-    /* left: 70px; */
+    
     padding-left:20px;
     padding-top: 40px;
-    transform: rotate(340deg); 
+   
     width:200px;
 
+}
+header img{
+    transform: rotate(340deg); 
 }
 
 li{
@@ -77,7 +56,7 @@ ul{
 
 section{
     width:800px;
-    height: 300px;
+    height: 400px;
     background-color :#8B4513;
     text-align: center;
     margin-top: 10px;
@@ -86,37 +65,18 @@ section{
     margin-top: 100px;
 }
 div{
-    /* background-color: azure; */
+    
     height: 400px;
 }
-/* .image{
-    float: right;
-     
+ 
+ a{
+     text-decoration: none;
+     color: white;.
+    
+ }
+a:hover{
+ color:brown;
+ background-color: chocolate;
+ padding: 20px;
 }
 
-div{
-    display: inline-block;
-  
-}
- div p{ 
-   
-    padding: 15px;
- } */
-
-
- /* #t01 tr:nth-child(even) {
-    background-color: #eee;
-  } */
- /* #t01 tr:nth-child(odd) {
-    background-color: #fff;
-   }
-   #t01 th {
-     background-color: black;
-     color: white;
-   } */
-
-    table,tr,th,td {
-    padding: 15px;
-    text-align: left;
-    border: black solid 2px;
-  } 

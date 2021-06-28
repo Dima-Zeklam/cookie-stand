@@ -72,8 +72,7 @@ cookieStand.prototype.render = function(){
 cookieStand.prototype. countTotle = function(){ 
     let trEl = document.createElement('tr');
     for(let i=0;i<this.hourlySales.length;i++){
-        calcTotl[i] = Seattle.hourlySales[i]+Tokyo.hourlySales[i]+Dubai.hourlySales[i] + Paris.hourlySales[i] + 
-        Lima.hourlySales[i] ;
+        calcTotl[i] = storsPlaces[0].hourlySales[i] + storsPlaces[1].hourlySales[i]+storsPlaces[2].hourlySales[i] + storsPlaces[3].hourlySales[i] + storsPlaces[4].hourlySales[i] ;
     }
     
 }

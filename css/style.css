@@ -17,10 +17,12 @@ header{
  height: 200px;  
 
  background-image: url('https://cdn1.vectorstock.com/i/1000x1000/43/85/realistic-dark-brown-carbon-background-texture-vector-1914385.jpg'); 
+ /* position: sticky; */
+ /* top:0; */
 } 
 
 
- img{
+ header img{
     
     padding-left:20px;
     padding-top: 40px;
@@ -55,14 +57,36 @@ ul{
 }
 
 section{
-    width:800px;
-    height: 400px;
-    background-color :#8B4513;
-    text-align: center;
+    /* border:red 3px solid ; */
+    position: relative;
+    display: inline-block;
+    /* text-align: center; */
+    /* width:800px; */
+    /* height: 600px; */
+    
     margin-top: 10px;
-    margin-left:300px;
-    margin-right:200px;
-    margin-top: 100px;
+    width: 1500px;
+   /* position: absolute; */
+   left: 10%;
+
+
+    
+}
+article:first-child{
+    display: inline-block;
+    background-color :#8B4513;
+      width: 50%;  
+     /* border:rgb(9, 255, 0) 3px solid ; */
+     height: 400px;
+    
+}
+section article:last-child{
+    display: inline-block;
+    position: absolute;
+    right:0;
+
+   /* width: 50%; */
+  /* left: 53%; */
 }
 div{
     
@@ -80,3 +104,14 @@ a:hover{
  padding: 20px;
 }
 
+#section2 img:first-child{
+  
+    
+   
+}
+
+.section2 img:last-child{
+    display: inline-block;
+    position: absolute;
+    right:0;
+}

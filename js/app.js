@@ -5,6 +5,9 @@ let x=[];
 let storsPlaces=[];
 let calcTotl =[];
 let dailyTotle = 0;
+let container = document.getElementById('div');
+let tableEl = document.createElement('table');
+container.appendChild(tableEl);
 function cookieStand (min,max,avg,location){
 this.minCust = min;
 this.maxCust = max;
@@ -33,9 +36,7 @@ cookieStand.prototype.calcTotlPerhr = function(){
         }
     }
 
-    let container = document.getElementById('div');
-    let tableEl = document.createElement('table');
-    container.appendChild(tableEl);
+  
 
 function tableRender(){
 
@@ -75,29 +76,39 @@ cookieStand.prototype.render = function(){
 
 }
 
-cookieStand.prototype. countTotle = function(){ 
-    let trEl = document.createElement('tr');
-    for(let i=0;i<this.hourlySales.length;i++){
+// cookieStand.prototype. countTotle = function(){ 
+//     let trEl = document.createElement('tr');
+//     for(let i=0;i<this.hourlySales.length;i++){
       
-        calcTotl[i] = storsPlaces[0].hourlySales[i] + storsPlaces[1].hourlySales[i]+storsPlaces[2].hourlySales[i] + storsPlaces[3].hourlySales[i] + storsPlaces[4].hourlySales[i] ;
+//         calcTotl[i] = storsPlaces[0].hourlySales[i] + storsPlaces[1].hourlySales[i]+storsPlaces[2].hourlySales[i] + storsPlaces[3].hourlySales[i] + storsPlaces[4].hourlySales[i] ;
         
-    }
+//     }
     
-}
+// }
 
 tableRender();
 function total(){
+    let megtotal = 0;
     let trEl = document.createElement('tr');
     let tdEl1 = document.createElement('td');
     tdEl1.textContent = 'Totals';
     trEl.appendChild(tdEl1);
     tableEl.appendChild(trEl);
-    for(let i=0 ; i<calcTotl.length;i++){
-    let tdEl1 = document.createElement('td');
-    tdEl1.textContent = calcTotl[i];
-    trEl.appendChild(tdEl1);
+    for(let y=0 ; y < hour.length;y++){
+    let tdEl = document.createElement('td');
+    let sum=0;
+    for(let s=0;s<storsPlaces.length;s++){
+   sum += storsPlaces[s].hourlySales[y];
     }
-    tableEl.appendChild(trEl)
+    megtotal += sum;
+    tdEl.textContent = sum;
+    trEl.appendChild(tdEl);
+    
+    }
+    let tdtotalEl = document.createElement('td');
+    tdtotalEl .textContent = megtotal;
+    trEl.appendChild(tdtotalEl );
+    tableEl.appendChild(trEl);
 }
 
 
@@ -106,7 +117,7 @@ cookieStand.prototype. generalCall = function(){
    this.calcTotlPerhr();
    this.calDailyTotle();
    this.render();
-   this.countTotle();
+
 }
 
 let Seattle = new cookieStand(23,65,6.3,'Seattle');
@@ -121,6 +132,7 @@ Tokyo.generalCall();
 Dubai.generalCall();
 Paris.generalCall();
 Lima.generalCall();
+
 total();
  
 

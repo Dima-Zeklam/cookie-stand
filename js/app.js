@@ -11,7 +11,7 @@ this.maxCust = max;
 this.avgCookiPerCust = avg;
 this.storeloc = location ;
 this.hourlySales = [];
-
+this.dailyTotle =0;
 storsPlaces.push(this);
 
 }
@@ -29,7 +29,7 @@ cookieStand.prototype.calcTotlPerhr = function(){
  cookieStand.prototype.calDailyTotle = function(){ 
         for(let i=0;i <hour.length;i++){
             this.hourlySales[i] = this.calcTotlPerhr();
-            
+            this.dailyTotle += this.hourlySales[i];  
         }
     }
 
@@ -51,6 +51,9 @@ function tableRender(){
         trEl.appendChild(thEl1);
        }
         tableEl.appendChild(trEl);
+        thEl=document.createElement('th');
+        thEl.textContent = 'Daily Location Total';
+        trEl.appendChild(thEl);
     }
     
 cookieStand.prototype.render = function(){ 
@@ -65,7 +68,10 @@ cookieStand.prototype.render = function(){
         
         trEl.appendChild(tdEl1);
     }
-    tableEl.appendChild(trEl);
+     tdEl = document.createElement('td');
+     tdEl.textContent = this.dailyTotle;
+     trEl.appendChild(tdEl);
+         tableEl.appendChild(trEl);
 
 }
 

@@ -89,10 +89,7 @@ section article:last-child{
    /* width: 50%; */
   /* left: 53%; */
 }
-div{
-    
-    height: 400px;
-}
+
  
  a{
      text-decoration: none;
@@ -107,14 +104,11 @@ a:hover{
  
 }
 
-#section2 img:first-child{
-  
-    
-   
-}
+
 
 .section2 img:last-child{
     display: inline-block;
     position: absolute;
     right:0;
 }
+

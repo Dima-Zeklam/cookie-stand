@@ -81,7 +81,7 @@ cookieStand.prototype.render = function(){
 
 function total(){
     let megtotal = 0;
-    let tfoot = document.createElement('tfoot');
+    let tfoot = document.createElement('tr');
     let tdEl = document.createElement('td');
     tdEl.textContent = 'Totals';
     tfoot.appendChild(tdEl);
@@ -100,6 +100,9 @@ function total(){
     tdtotalEl .textContent = megtotal;
     tfoot.appendChild(tdtotalEl);
     tableEl.appendChild(tfoot);
+
+
+    
 }
 
 
@@ -119,10 +122,36 @@ let Paris  = new cookieStand(20,38,2.3,'Paris');
 let Lima  = new cookieStand(2,16,4.6,'Lima' );
 
 
+
+
+let myform = document.getElementById("myform");
+myform.addEventListener('submit',newstore);
+
+function newstore(event){
+    var rowCount = tableEl.rows.length;
+    tableEl.deleteRow(rowCount-1);
+    event.preventDefault();
+    let storeloc = event.target.storeloc.value;
+    let min = event.target.min.value;
+    let max = event.target.max.value;
+    let avg = event.target.avg.value;
+
+    let newLoc = new cookieStand(min,max,avg,storeloc);
+    newLoc.generalCall();
+   
+  
+    total();
+
+}
+
  
 for(let f=0;f<storsPlaces.length;f++){
     storsPlaces[f].generalCall();
     
 }
+
 total();
+
+  
+myform.addEventListener('submit',newstore);
 

@@ -22,6 +22,7 @@ h2{
 }
 div{
     padding-bottom: 10px;
+   
     
 }
 table{
@@ -39,3 +40,43 @@ table,tr,th,td {
   th{
 font-weight: bold;
   }
+  #myform{
+
+   
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 25px;
+    
+
+  }
+  fieldset{
+    border: black 3px solid;
+    width:700px;
+    position: relative;
+    left:450px;
+    background-color: rgb(206, 116, 75);
+    font-weight: bold;
+  
+  }
+  input{
+     height: 40px;
+     font-size: 20px;
+     
+  }
+ #submit{
+margin-top: 20px;
+margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+ }
+
+main{
+    margin-bottom: 100px;
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    height: 500px;
+}

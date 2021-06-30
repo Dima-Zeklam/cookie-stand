@@ -56,7 +56,8 @@ function tableRender(){
         thEl.textContent = 'Daily Location Total';
         trEl.appendChild(thEl);
     }
-    
+    tableRender();
+
 cookieStand.prototype.render = function(){ 
     let trEl = document.createElement('tr');
      let tdEl = document.createElement('td');
@@ -77,14 +78,14 @@ cookieStand.prototype.render = function(){
 }
 
 
-tableRender();
+
 function total(){
     let megtotal = 0;
-    let trEl = document.createElement('tr');
-    let tdEl1 = document.createElement('td');
-    tdEl1.textContent = 'Totals';
-    trEl.appendChild(tdEl1);
-    tableEl.appendChild(trEl);
+    let tfoot = document.createElement('tfoot');
+    let tdEl = document.createElement('td');
+    tdEl.textContent = 'Totals';
+    tfoot.appendChild(tdEl);
+    tableEl.appendChild(tfoot);
     for(let y=0 ; y < hour.length;y++){
     let tdEl = document.createElement('td');
     let sum=0;
@@ -93,13 +94,12 @@ function total(){
     }
     megtotal += sum;
     tdEl.textContent = sum;
-    trEl.appendChild(tdEl);
-    
+    tfoot.appendChild(tdEl);
     }
     let tdtotalEl = document.createElement('td');
     tdtotalEl .textContent = megtotal;
-    trEl.appendChild(tdtotalEl );
-    tableEl.appendChild(trEl);
+    tfoot.appendChild(tdtotalEl);
+    tableEl.appendChild(tfoot);
 }
 
 
@@ -108,7 +108,8 @@ cookieStand.prototype. generalCall = function(){
    this.calcTotlPerhr();
    this.calDailyTotle();
    this.render();
-
+  
+  
 }
 
 let Seattle = new cookieStand(23,65,6.3,'Seattle');
@@ -117,11 +118,29 @@ let Dubai  = new cookieStand(11,38,3.7,'Dubai');
 let Paris  = new cookieStand(20,38,2.3,'Paris');
 let Lima  = new cookieStand(2,16,4.6,'Lima' );
 
+
+
+
+
+let myform = document.getElementById("myform");
+myform.addEventListener('submit',newstore);
+
+function newstore(event){
+    event.preventDefault();
+    let storeloc = event.target.storeloc.value;
+    let min = event.target.min.value;
+    let max = event.target.max.value;
+    let avg = event.target.avg.value;
+
+    let newLoc = new cookieStand(min,max,avg,storeloc);
+    newLoc.generalCall();
+    
+
+}
+ 
 for(let f=0;f<storsPlaces.length;f++){
     storsPlaces[f].generalCall();
+    
 }
-
 total();
- 
-
 

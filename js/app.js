@@ -143,6 +143,7 @@ function newstore(event){
     total();
 
 }
+
  
 for(let f=0;f<storsPlaces.length;f++){
     storsPlaces[f].generalCall();

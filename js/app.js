@@ -125,6 +125,7 @@ let myform = document.getElementById("myform");
 myform.addEventListener('submit',newstore);
 
 function newstore(event){
+    
     var rowCount = tableEl.rows.length;
     tableEl.deleteRow(rowCount-1);
     event.preventDefault();

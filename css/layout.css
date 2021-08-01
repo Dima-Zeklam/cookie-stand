@@ -1,43 +1,21 @@
-
-ul{
-
-    list-style-type: initial;
-   
-}
-
-
-li{
-    margin: 20px;
-    margin-left: 120px;
-    font-size: 20px;
-    padding: 8px;
-  
-}
-
-h2{
-     font-size: 40px;
-    font-family: 'Pacifico', cursive; 
-    margin-left: 30px;
-    margin-top: 20px;
-}
-div{
+/* div{
     margin-top: 50px;
    /* border: blue 3px solid; */
-   width:1350px;
+   /* width:1350px;
    position: relative;
    left:18%;
  
    right: 15%;
-   padding: 30px;
+   padding: 30px; }*/
     
-}
+
 table{
     /* margin:100px; */
     position: relative;
     bottom: 0;
     width:600px;
-    
-    margin: 0;
+    left:28%;
+
 }
 table,tr,th,td {
     position: relative;
@@ -57,10 +35,10 @@ font-weight: bold;
 
    /* border: chartreuse 3px solid; */
    width:710px;
-    text-align: center;
-      font-size: 25px;
+    
+    font-size: 25px;
     position: relative;
-    left:300px;
+    left:40%;
     padding: 10px;
     margin: 30px;
 
@@ -84,18 +62,15 @@ font-weight: bold;
      
   }
  #submit{
-margin-top: 20px;
-margin-bottom: 20px;
+   margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: bold; 
+ }
+ #submit:hover{
+   background-color: chocolate;
  }
 
 main{
-    margin-bottom: 100px;
-}
-
-footer{
-    position: relative;
-    bottom: 0;
-    height: 500px;
+  text-align: center;
 }
